@@ -1,0 +1,187 @@
+html,
+body {
+    min-height: 100%;
+    background: url(images/mainBack.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*Title Animation Start*/
+
+.animation-box {
+    width: 100%;
+    height: 10rem;
+    background-color: rgba(0, 0, 0, 0);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.animation-container {
+    width: 100%;
+    height: 30rem;
+}
+
+@keyframes topFadeOut {
+    0% {
+        position: absolute;
+        top: -6rem;
+        opacity: 0;
+    }
+
+    75% {
+        position: absolute;
+        top: 0.5rem;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rightFadeInOut {
+    0% {
+        position: absolute;
+        right: -20%;
+        opacity: 0;
+    }
+
+    75% {
+        position: absolute;
+        right: 25%;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        right: 25%;
+    }
+}
+
+.first-text {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 4.5em;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    opacity: 0;
+    animation-name: topFadeOut;
+    animation-duration: 5s;
+    color: #000000;
+    animation-fill-mode: forwards;
+}
+
+.second-text {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 4em;
+    position: absolute;
+    top: 46%;
+    opacity: 0;
+    animation-name: rightFadeInOut;
+    animation-delay: 3s;
+    animation-duration: 6s;
+    color: #000000;
+    animation-fill-mode: forwards;
+}
+
+/*Title Animation End*/
+
+.main {
+    margin-top: 2em;
+}
+
+.card {
+    margin-bottom: 2em;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.midCard {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.card .card-text {
+    color: #ffffff;
+    text-align: center;
+}
+
+/*Media Queries Begin*/
+
+@media only screen and (min-width: 300px) and (max-width: 499px) {
+    .first-text {
+        left: 2%;
+        font-size: 2.5em;
+    }
+
+    .second-text {
+        left: 35%;
+        font-size: 2em;
+        margin-top: -0.5em;
+    }
+
+    .main {
+        margin-top: -2em;
+        ;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+
+    .first-text {
+        left: 10%;
+        font-size: 3em;
+    }
+
+    .second-text {
+        left: 40%;
+        font-size: 2.5em;
+        margin-top: -0.5em;
+    }
+
+    .main {
+        margin-top: -2em;
+        ;
+    }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1999px) {
+    .first-text {
+        left: 10%;
+        font-size: 4em;
+        margin-top: -0.2em;
+    }
+
+    .second-text {
+        left: 40%;
+        font-size: 3.3em;
+        margin-top: -0.3em;
+    }
+
+    .main {
+        margin-top: 1em;
+    }
+}
+
+
+@media only screen and (min-width:1200px) and (max-width: 2000px) {
+    .first-text {
+        left: 20%;
+        font-size: 4.5em;
+        margin-top: -0.2em;
+    }
+
+    .second-text {
+        left: 50%;
+        font-size: 3.5em;
+        margin-top: -0.1em;
+    }
+
+    .main {
+        margin-top: 1em;
+        ;
+    }
+}
